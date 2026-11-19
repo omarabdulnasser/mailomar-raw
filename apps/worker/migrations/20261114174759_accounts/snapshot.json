@@ -1,0 +1,1260 @@
+{
+    "version": "7",
+    "dialect": "sqlite",
+    "id": "c91bcb1c-6e9f-4f51-b5d2-ece20a9d9332",
+    "prevIds": ["03813b36-f701-4596-8393-75f2968dd1e4"],
+    "ddl": [
+        {
+            "name": "aliases",
+            "entityType": "tables"
+        },
+        {
+            "name": "destinations",
+            "entityType": "tables"
+        },
+        {
+            "name": "domains",
+            "entityType": "tables"
+        },
+        {
+            "name": "reverse_contacts",
+            "entityType": "tables"
+        },
+        {
+            "name": "send_usage",
+            "entityType": "tables"
+        },
+        {
+            "name": "account",
+            "entityType": "tables"
+        },
+        {
+            "name": "passkey",
+            "entityType": "tables"
+        },
+        {
+            "name": "rate_limit",
+            "entityType": "tables"
+        },
+        {
+            "name": "session",
+            "entityType": "tables"
+        },
+        {
+            "name": "user",
+            "entityType": "tables"
+        },
+        {
+            "name": "verification",
+            "entityType": "tables"
+        },
+        {
+            "table": "aliases",
+            "name": "id",
+            "type": "text",
+            "notNull": false,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "aliases",
+            "name": "user_id",
+            "type": "text",
+            "notNull": false,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "aliases",
+            "name": "address",
+            "type": "text",
+            "notNull": true,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "aliases",
+            "name": "domain_id",
+            "type": "text",
+            "notNull": true,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "aliases",
+            "name": "destination_id",
+            "type": "text",
+            "notNull": true,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "aliases",
+            "name": "description",
+            "type": "text",
+            "notNull": true,
+            "autoincrement": false,
+            "default": "''",
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "aliases",
+            "name": "enabled",
+            "type": "integer",
+            "notNull": true,
+            "autoincrement": false,
+            "default": "true",
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "aliases",
+            "name": "created_at",
+            "type": "integer",
+            "notNull": true,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "aliases",
+            "name": "forwarded_count",
+            "type": "integer",
+            "notNull": true,
+            "autoincrement": false,
+            "default": "0",
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "aliases",
+            "name": "blocked_count",
+            "type": "integer",
+            "notNull": true,
+            "autoincrement": false,
+            "default": "0",
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "aliases",
+            "name": "sent_count",
+            "type": "integer",
+            "notNull": true,
+            "autoincrement": false,
+            "default": "0",
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "aliases",
+            "name": "last_email_at",
+            "type": "integer",
+            "notNull": false,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "destinations",
+            "name": "id",
+            "type": "text",
+            "notNull": false,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "destinations",
+            "name": "user_id",
+            "type": "text",
+            "notNull": false,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "destinations",
+            "name": "email",
+            "type": "text",
+            "notNull": true,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "destinations",
+            "name": "verified_at",
+            "type": "integer",
+            "notNull": false,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "destinations",
+            "name": "verification_hash",
+            "type": "text",
+            "notNull": false,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "destinations",
+            "name": "verification_sent_at",
+            "type": "integer",
+            "notNull": false,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "destinations",
+            "name": "created_at",
+            "type": "integer",
+            "notNull": true,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "domains",
+            "name": "id",
+            "type": "text",
+            "notNull": false,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "domains",
+            "name": "name",
+            "type": "text",
+            "notNull": true,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "domains",
+            "name": "shared",
+            "type": "integer",
+            "notNull": true,
+            "autoincrement": false,
+            "default": "false",
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "domains",
+            "name": "created_at",
+            "type": "integer",
+            "notNull": true,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "reverse_contacts",
+            "name": "key",
+            "type": "text",
+            "notNull": false,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "reverse_contacts",
+            "name": "alias_id",
+            "type": "text",
+            "notNull": true,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "reverse_contacts",
+            "name": "email",
+            "type": "text",
+            "notNull": true,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "reverse_contacts",
+            "name": "created_at",
+            "type": "integer",
+            "notNull": true,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "send_usage",
+            "name": "user_id",
+            "type": "text",
+            "notNull": true,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "send_usage",
+            "name": "day",
+            "type": "text",
+            "notNull": true,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "send_usage",
+            "name": "count",
+            "type": "integer",
+            "notNull": true,
+            "autoincrement": false,
+            "default": "0",
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "account",
+            "name": "id",
+            "type": "text",
+            "notNull": false,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "account",
+            "name": "account_id",
+            "type": "text",
+            "notNull": true,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "account",
+            "name": "provider_id",
+            "type": "text",
+            "notNull": true,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "account",
+            "name": "user_id",
+            "type": "text",
+            "notNull": true,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "account",
+            "name": "access_token",
+            "type": "text",
+            "notNull": false,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "account",
+            "name": "refresh_token",
+            "type": "text",
+            "notNull": false,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "account",
+            "name": "id_token",
+            "type": "text",
+            "notNull": false,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "account",
+            "name": "access_token_expires_at",
+            "type": "integer",
+            "notNull": false,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "account",
+            "name": "refresh_token_expires_at",
+            "type": "integer",
+            "notNull": false,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "account",
+            "name": "scope",
+            "type": "text",
+            "notNull": false,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "account",
+            "name": "password",
+            "type": "text",
+            "notNull": false,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "account",
+            "name": "created_at",
+            "type": "integer",
+            "notNull": true,
+            "autoincrement": false,
+            "default": "(cast(unixepoch('subsecond') * 1000 as integer))",
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "account",
+            "name": "updated_at",
+            "type": "integer",
+            "notNull": true,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "passkey",
+            "name": "id",
+            "type": "text",
+            "notNull": false,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "passkey",
+            "name": "name",
+            "type": "text",
+            "notNull": false,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "passkey",
+            "name": "public_key",
+            "type": "text",
+            "notNull": true,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "passkey",
+            "name": "user_id",
+            "type": "text",
+            "notNull": true,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "passkey",
+            "name": "credential_id",
+            "type": "text",
+            "notNull": true,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "passkey",
+            "name": "counter",
+            "type": "integer",
+            "notNull": true,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "passkey",
+            "name": "device_type",
+            "type": "text",
+            "notNull": true,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "passkey",
+            "name": "backed_up",
+            "type": "integer",
+            "notNull": true,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "passkey",
+            "name": "transports",
+            "type": "text",
+            "notNull": false,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "passkey",
+            "name": "created_at",
+            "type": "integer",
+            "notNull": false,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "passkey",
+            "name": "aaguid",
+            "type": "text",
+            "notNull": false,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "rate_limit",
+            "name": "id",
+            "type": "text",
+            "notNull": false,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "rate_limit",
+            "name": "key",
+            "type": "text",
+            "notNull": true,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "rate_limit",
+            "name": "count",
+            "type": "integer",
+            "notNull": true,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "rate_limit",
+            "name": "last_request",
+            "type": "integer",
+            "notNull": true,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "session",
+            "name": "id",
+            "type": "text",
+            "notNull": false,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "session",
+            "name": "expires_at",
+            "type": "integer",
+            "notNull": true,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "session",
+            "name": "token",
+            "type": "text",
+            "notNull": true,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "session",
+            "name": "created_at",
+            "type": "integer",
+            "notNull": true,
+            "autoincrement": false,
+            "default": "(cast(unixepoch('subsecond') * 1000 as integer))",
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "session",
+            "name": "updated_at",
+            "type": "integer",
+            "notNull": true,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "session",
+            "name": "ip_address",
+            "type": "text",
+            "notNull": false,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "session",
+            "name": "user_agent",
+            "type": "text",
+            "notNull": false,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "session",
+            "name": "user_id",
+            "type": "text",
+            "notNull": true,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "session",
+            "name": "impersonated_by",
+            "type": "text",
+            "notNull": false,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "user",
+            "name": "id",
+            "type": "text",
+            "notNull": false,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "user",
+            "name": "name",
+            "type": "text",
+            "notNull": true,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "user",
+            "name": "email",
+            "type": "text",
+            "notNull": true,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "user",
+            "name": "email_verified",
+            "type": "integer",
+            "notNull": true,
+            "autoincrement": false,
+            "default": "false",
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "user",
+            "name": "image",
+            "type": "text",
+            "notNull": false,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "user",
+            "name": "created_at",
+            "type": "integer",
+            "notNull": true,
+            "autoincrement": false,
+            "default": "(cast(unixepoch('subsecond') * 1000 as integer))",
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "user",
+            "name": "updated_at",
+            "type": "integer",
+            "notNull": true,
+            "autoincrement": false,
+            "default": "(cast(unixepoch('subsecond') * 1000 as integer))",
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "user",
+            "name": "role",
+            "type": "text",
+            "notNull": false,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "user",
+            "name": "banned",
+            "type": "integer",
+            "notNull": false,
+            "autoincrement": false,
+            "default": "false",
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "user",
+            "name": "ban_reason",
+            "type": "text",
+            "notNull": false,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "user",
+            "name": "ban_expires",
+            "type": "integer",
+            "notNull": false,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "verification",
+            "name": "id",
+            "type": "text",
+            "notNull": false,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "verification",
+            "name": "identifier",
+            "type": "text",
+            "notNull": true,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "verification",
+            "name": "value",
+            "type": "text",
+            "notNull": true,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "verification",
+            "name": "expires_at",
+            "type": "integer",
+            "notNull": true,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "verification",
+            "name": "created_at",
+            "type": "integer",
+            "notNull": true,
+            "autoincrement": false,
+            "default": "(cast(unixepoch('subsecond') * 1000 as integer))",
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "verification",
+            "name": "updated_at",
+            "type": "integer",
+            "notNull": true,
+            "autoincrement": false,
+            "default": "(cast(unixepoch('subsecond') * 1000 as integer))",
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "aliases",
+            "name": "aliases_domain_created",
+            "columns": [
+                {
+                    "value": "domain_id",
+                    "isExpression": false
+                },
+                {
+                    "value": "created_at",
+                    "isExpression": false
+                }
+            ],
+            "isUnique": false,
+            "where": null,
+            "origin": "manual",
+            "entityType": "indexes"
+        },
+        {
+            "table": "aliases",
+            "name": "aliases_user_created",
+            "columns": [
+                {
+                    "value": "user_id",
+                    "isExpression": false
+                },
+                {
+                    "value": "created_at",
+                    "isExpression": false
+                }
+            ],
+            "isUnique": false,
+            "where": null,
+            "origin": "manual",
+            "entityType": "indexes"
+        },
+        {
+            "table": "destinations",
+            "name": "destinations_user_email",
+            "columns": [
+                {
+                    "value": "user_id",
+                    "isExpression": false
+                },
+                {
+                    "value": "email",
+                    "isExpression": false
+                }
+            ],
+            "isUnique": true,
+            "where": null,
+            "origin": "manual",
+            "entityType": "indexes"
+        },
+        {
+            "table": "destinations",
+            "name": "destinations_email",
+            "columns": [
+                {
+                    "value": "email",
+                    "isExpression": false
+                }
+            ],
+            "isUnique": false,
+            "where": null,
+            "origin": "manual",
+            "entityType": "indexes"
+        },
+        {
+            "table": "reverse_contacts",
+            "name": "reverse_contacts_alias_email",
+            "columns": [
+                {
+                    "value": "alias_id",
+                    "isExpression": false
+                },
+                {
+                    "value": "email",
+                    "isExpression": false
+                }
+            ],
+            "isUnique": true,
+            "where": null,
+            "origin": "manual",
+            "entityType": "indexes"
+        },
+        {
+            "table": "account",
+            "name": "account_userId_idx",
+            "columns": [
+                {
+                    "value": "user_id",
+                    "isExpression": false
+                }
+            ],
+            "isUnique": false,
+            "where": null,
+            "origin": "manual",
+            "entityType": "indexes"
+        },
+        {
+            "table": "passkey",
+            "name": "passkey_userId_idx",
+            "columns": [
+                {
+                    "value": "user_id",
+                    "isExpression": false
+                }
+            ],
+            "isUnique": false,
+            "where": null,
+            "origin": "manual",
+            "entityType": "indexes"
+        },
+        {
+            "table": "passkey",
+            "name": "passkey_credentialID_idx",
+            "columns": [
+                {
+                    "value": "credential_id",
+                    "isExpression": false
+                }
+            ],
+            "isUnique": false,
+            "where": null,
+            "origin": "manual",
+            "entityType": "indexes"
+        },
+        {
+            "table": "session",
+            "name": "session_userId_idx",
+            "columns": [
+                {
+                    "value": "user_id",
+                    "isExpression": false
+                }
+            ],
+            "isUnique": false,
+            "where": null,
+            "origin": "manual",
+            "entityType": "indexes"
+        },
+        {
+            "table": "verification",
+            "name": "verification_identifier_idx",
+            "columns": [
+                {
+                    "value": "identifier",
+                    "isExpression": false
+                }
+            ],
+            "isUnique": false,
+            "where": null,
+            "origin": "manual",
+            "entityType": "indexes"
+        },
+        {
+            "table": "aliases",
+            "name": "fk_aliases_user_id_user_id_fk",
+            "columns": ["user_id"],
+            "tableTo": "user",
+            "columnsTo": ["id"],
+            "onUpdate": "NO ACTION",
+            "onDelete": "CASCADE",
+            "nameExplicit": false,
+            "entityType": "fks"
+        },
+        {
+            "table": "aliases",
+            "name": "fk_aliases_domain_id_domains_id_fk",
+            "columns": ["domain_id"],
+            "tableTo": "domains",
+            "columnsTo": ["id"],
+            "onUpdate": "NO ACTION",
+            "onDelete": "NO ACTION",
+            "nameExplicit": false,
+            "entityType": "fks"
+        },
+        {
+            "table": "aliases",
+            "name": "fk_aliases_destination_id_destinations_id_fk",
+            "columns": ["destination_id"],
+            "tableTo": "destinations",
+            "columnsTo": ["id"],
+            "onUpdate": "NO ACTION",
+            "onDelete": "NO ACTION",
+            "nameExplicit": false,
+            "entityType": "fks"
+        },
+        {
+            "table": "destinations",
+            "name": "fk_destinations_user_id_user_id_fk",
+            "columns": ["user_id"],
+            "tableTo": "user",
+            "columnsTo": ["id"],
+            "onUpdate": "NO ACTION",
+            "onDelete": "CASCADE",
+            "nameExplicit": false,
+            "entityType": "fks"
+        },
+        {
+            "table": "reverse_contacts",
+            "name": "fk_reverse_contacts_alias_id_aliases_id_fk",
+            "columns": ["alias_id"],
+            "tableTo": "aliases",
+            "columnsTo": ["id"],
+            "onUpdate": "NO ACTION",
+            "onDelete": "CASCADE",
+            "nameExplicit": false,
+            "entityType": "fks"
+        },
+        {
+            "table": "send_usage",
+            "name": "fk_send_usage_user_id_user_id_fk",
+            "columns": ["user_id"],
+            "tableTo": "user",
+            "columnsTo": ["id"],
+            "onUpdate": "NO ACTION",
+            "onDelete": "CASCADE",
+            "nameExplicit": false,
+            "entityType": "fks"
+        },
+        {
+            "table": "account",
+            "name": "fk_account_user_id_user_id_fk",
+            "columns": ["user_id"],
+            "tableTo": "user",
+            "columnsTo": ["id"],
+            "onUpdate": "NO ACTION",
+            "onDelete": "CASCADE",
+            "nameExplicit": false,
+            "entityType": "fks"
+        },
+        {
+            "table": "passkey",
+            "name": "fk_passkey_user_id_user_id_fk",
+            "columns": ["user_id"],
+            "tableTo": "user",
+            "columnsTo": ["id"],
+            "onUpdate": "NO ACTION",
+            "onDelete": "CASCADE",
+            "nameExplicit": false,
+            "entityType": "fks"
+        },
+        {
+            "table": "session",
+            "name": "fk_session_user_id_user_id_fk",
+            "columns": ["user_id"],
+            "tableTo": "user",
+            "columnsTo": ["id"],
+            "onUpdate": "NO ACTION",
+            "onDelete": "CASCADE",
+            "nameExplicit": false,
+            "entityType": "fks"
+        },
+        {
+            "table": "send_usage",
+            "name": "send_usage_pk",
+            "columns": ["user_id", "day"],
+            "nameExplicit": false,
+            "entityType": "pks"
+        },
+        {
+            "table": "aliases",
+            "name": "aliases_pk",
+            "columns": ["id"],
+            "nameExplicit": false,
+            "entityType": "pks"
+        },
+        {
+            "table": "destinations",
+            "name": "destinations_pk",
+            "columns": ["id"],
+            "nameExplicit": false,
+            "entityType": "pks"
+        },
+        {
+            "table": "domains",
+            "name": "domains_pk",
+            "columns": ["id"],
+            "nameExplicit": false,
+            "entityType": "pks"
+        },
+        {
+            "table": "reverse_contacts",
+            "name": "reverse_contacts_pk",
+            "columns": ["key"],
+            "nameExplicit": false,
+            "entityType": "pks"
+        },
+        {
+            "table": "account",
+            "name": "account_pk",
+            "columns": ["id"],
+            "nameExplicit": false,
+            "entityType": "pks"
+        },
+        {
+            "table": "passkey",
+            "name": "passkey_pk",
+            "columns": ["id"],
+            "nameExplicit": false,
+            "entityType": "pks"
+        },
+        {
+            "table": "rate_limit",
+            "name": "rate_limit_pk",
+            "columns": ["id"],
+            "nameExplicit": false,
+            "entityType": "pks"
+        },
+        {
+            "table": "session",
+            "name": "session_pk",
+            "columns": ["id"],
+            "nameExplicit": false,
+            "entityType": "pks"
+        },
+        {
+            "table": "user",
+            "name": "user_pk",
+            "columns": ["id"],
+            "nameExplicit": false,
+            "entityType": "pks"
+        },
+        {
+            "table": "verification",
+            "name": "verification_pk",
+            "columns": ["id"],
+            "nameExplicit": false,
+            "entityType": "pks"
+        },
+        {
+            "table": "aliases",
+            "name": "aliases_address_unique",
+            "columns": ["address"],
+            "nameExplicit": false,
+            "entityType": "uniques"
+        },
+        {
+            "table": "domains",
+            "name": "domains_name_unique",
+            "columns": ["name"],
+            "nameExplicit": false,
+            "entityType": "uniques"
+        },
+        {
+            "table": "rate_limit",
+            "name": "rate_limit_key_unique",
+            "columns": ["key"],
+            "nameExplicit": false,
+            "entityType": "uniques"
+        },
+        {
+            "table": "session",
+            "name": "session_token_unique",
+            "columns": ["token"],
+            "nameExplicit": false,
+            "entityType": "uniques"
+        },
+        {
+            "table": "user",
+            "name": "user_email_unique",
+            "columns": ["email"],
+            "nameExplicit": false,
+            "entityType": "uniques"
+        }
+    ],
+    "renames": []
+}

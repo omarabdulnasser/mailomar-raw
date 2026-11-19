@@ -1,0 +1,2 @@
+# Line endings as oxfmt and CI expect them, also on Windows checkouts.
+* text=auto eol=lf

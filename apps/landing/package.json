@@ -1,0 +1,32 @@
+{
+    "name": "@mailflare/landing",
+    "version": "0.0.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite dev",
+        "build": "vite build",
+        "preview": "vite preview --outDir dist/client",
+        "deploy": "wrangler pages deploy dist/client --branch main",
+        "check-types": "tsc --noEmit"
+    },
+    "dependencies": {
+        "@astryxdesign/core": "0.7.16",
+        "@mailflare/core": "workspace:*",
+        "react": "catalog:",
+        "react-dom": "catalog:",
+        "react-icons": "^5.7.0",
+        "react-server-dom-webpack": "^19.3.1",
+        "vinext": "^1.4.5"
+    },
+    "devDependencies": {
+        "@mailflare/config": "workspace:*",
+        "@types/react": "^19.3.0",
+        "@types/react-dom": "^19.3.0",
+        "@vitejs/plugin-react": "^6.3.0",
+        "@vitejs/plugin-rsc": "^0.5.39",
+        "typescript": "catalog:",
+        "vite": "^8.3.8",
+        "wrangler": "^4.162.0"
+    }
+}

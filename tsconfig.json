@@ -1,0 +1,3 @@
+{
+    "extends": "@mailflare/config/tsconfig.base.json"
+}

@@ -1,0 +1,33 @@
+{
+    "$schema": "node_modules/wrangler/config-schema.json",
+    "name": "mailflare",
+    "main": "src/index.ts",
+    "compatibility_date": "2026-11-01",
+    // better-auth needs AsyncLocalStorage.
+    "compatibility_flags": ["nodejs_compat"],
+    // Settings (PUBLIC_SIGNUPS, ADMIN_EMAILS, MAIL_FROM, ...) are set in the
+    // dashboard; keep them across deploys. See README.md.
+    "keep_vars": true,
+    "observability": { "enabled": true },
+    // The Mailflare web app, locked to this Worker (built by `pnpm build`).
+    // Everything but the API is the app; unknown paths load it too.
+    "assets": {
+        "directory": "app",
+        "not_found_handling": "single-page-application",
+        "run_worker_first": ["/api/*"],
+    },
+    // Re-sends incoming mail (free to verified destinations) and sends from
+    // aliases (arbitrary recipients: Workers Paid plan with a sending domain).
+    "send_email": [{ "name": "EMAIL" }],
+    // Daily housekeeping: expired links, sessions and counters.
+    "triggers": { "crons": ["17 3 * * *"] },
+    "d1_databases": [
+        {
+            // No database_id: `wrangler deploy` creates the database on first deploy.
+            "binding": "DB",
+            "database_name": "mailflare",
+            "migrations_dir": "migrations",
+            "migrations_pattern": "migrations/*/migration.sql",
+        },
+    ],
+}

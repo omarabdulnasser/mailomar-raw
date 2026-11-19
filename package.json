@@ -1,0 +1,40 @@
+{
+    "name": "mailomar-raw",
+    "version": "2.0.0",
+    "private": true,
+    "workspaces": [
+        "apps/*",
+        "packages/*"
+    ],
+    "type": "module",
+    "scripts": {
+        "dev": "pnpm -r dev",
+        "build": "node scripts/build.mjs",
+        "check-types": "pnpm -r check-types",
+        "test": "pnpm -r test",
+        "deploy": "pnpm --filter @mailflare/worker run deploy:root",
+        "dev:web": "pnpm --filter @mailflare/web dev",
+        "check": "oxlint && oxfmt --write"
+    },
+    "devDependencies": {
+        "@mailflare/config": "workspace:*",
+        "lefthook": "^2.2.2",
+        "oxfmt": "^0.78.0",
+        "oxlint": "^1.93.0",
+        "typescript": "catalog:"
+    },
+    "packageManager": "pnpm@12.21.0",
+    "cloudflare": {
+        "bindings": {
+            "ADMIN_TOKEN": {
+                "description": "Token the Mailflare app uses to manage your aliases. Use a long random string, for example from `openssl rand -base64 32`, and keep it: you enter it in the app to connect."
+            },
+            "AUTH_SECRET": {
+                "description": "Secret that signs account sessions. Use another long random string, for example from `openssl rand -base64 32`. You never need to enter it anywhere."
+            },
+            "DB": {
+                "description": "D1 database for your domains, destinations and aliases. Created automatically."
+            }
+        }
+    }
+}

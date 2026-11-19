@@ -1,0 +1,263 @@
+{
+    "version": "7",
+    "dialect": "sqlite",
+    "id": "9ba3b132-2402-4f86-86cd-4b25607f4860",
+    "prevIds": ["00000000-0000-0000-0000-000000000000"],
+    "ddl": [
+        {
+            "name": "aliases",
+            "entityType": "tables"
+        },
+        {
+            "name": "destinations",
+            "entityType": "tables"
+        },
+        {
+            "name": "domains",
+            "entityType": "tables"
+        },
+        {
+            "table": "aliases",
+            "name": "id",
+            "type": "text",
+            "notNull": false,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "aliases",
+            "name": "address",
+            "type": "text",
+            "notNull": true,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "aliases",
+            "name": "domain_id",
+            "type": "text",
+            "notNull": true,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "aliases",
+            "name": "destination_id",
+            "type": "text",
+            "notNull": true,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "aliases",
+            "name": "description",
+            "type": "text",
+            "notNull": true,
+            "autoincrement": false,
+            "default": "''",
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "aliases",
+            "name": "enabled",
+            "type": "integer",
+            "notNull": true,
+            "autoincrement": false,
+            "default": "true",
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "aliases",
+            "name": "created_at",
+            "type": "integer",
+            "notNull": true,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "aliases",
+            "name": "forwarded_count",
+            "type": "integer",
+            "notNull": true,
+            "autoincrement": false,
+            "default": "0",
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "aliases",
+            "name": "blocked_count",
+            "type": "integer",
+            "notNull": true,
+            "autoincrement": false,
+            "default": "0",
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "aliases",
+            "name": "last_email_at",
+            "type": "integer",
+            "notNull": false,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "destinations",
+            "name": "id",
+            "type": "text",
+            "notNull": false,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "destinations",
+            "name": "email",
+            "type": "text",
+            "notNull": true,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "destinations",
+            "name": "created_at",
+            "type": "integer",
+            "notNull": true,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "domains",
+            "name": "id",
+            "type": "text",
+            "notNull": false,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "domains",
+            "name": "name",
+            "type": "text",
+            "notNull": true,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "domains",
+            "name": "created_at",
+            "type": "integer",
+            "notNull": true,
+            "autoincrement": false,
+            "default": null,
+            "generated": null,
+            "entityType": "columns"
+        },
+        {
+            "table": "aliases",
+            "name": "aliases_domain_created",
+            "columns": [
+                {
+                    "value": "domain_id",
+                    "isExpression": false
+                },
+                {
+                    "value": "created_at",
+                    "isExpression": false
+                }
+            ],
+            "isUnique": false,
+            "where": null,
+            "origin": "manual",
+            "entityType": "indexes"
+        },
+        {
+            "table": "aliases",
+            "name": "fk_aliases_domain_id_domains_id_fk",
+            "columns": ["domain_id"],
+            "tableTo": "domains",
+            "columnsTo": ["id"],
+            "onUpdate": "NO ACTION",
+            "onDelete": "NO ACTION",
+            "nameExplicit": false,
+            "entityType": "fks"
+        },
+        {
+            "table": "aliases",
+            "name": "fk_aliases_destination_id_destinations_id_fk",
+            "columns": ["destination_id"],
+            "tableTo": "destinations",
+            "columnsTo": ["id"],
+            "onUpdate": "NO ACTION",
+            "onDelete": "NO ACTION",
+            "nameExplicit": false,
+            "entityType": "fks"
+        },
+        {
+            "table": "aliases",
+            "name": "aliases_pk",
+            "columns": ["id"],
+            "nameExplicit": false,
+            "entityType": "pks"
+        },
+        {
+            "table": "destinations",
+            "name": "destinations_pk",
+            "columns": ["id"],
+            "nameExplicit": false,
+            "entityType": "pks"
+        },
+        {
+            "table": "domains",
+            "name": "domains_pk",
+            "columns": ["id"],
+            "nameExplicit": false,
+            "entityType": "pks"
+        },
+        {
+            "table": "aliases",
+            "name": "aliases_address_unique",
+            "columns": ["address"],
+            "nameExplicit": false,
+            "entityType": "uniques"
+        },
+        {
+            "table": "destinations",
+            "name": "destinations_email_unique",
+            "columns": ["email"],
+            "nameExplicit": false,
+            "entityType": "uniques"
+        },
+        {
+            "table": "domains",
+            "name": "domains_name_unique",
+            "columns": ["name"],
+            "nameExplicit": false,
+            "entityType": "uniques"
+        }
+    ],
+    "renames": []
+}

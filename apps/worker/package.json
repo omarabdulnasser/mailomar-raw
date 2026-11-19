@@ -1,0 +1,47 @@
+{
+    "name": "@mailflare/worker",
+    "version": "2.0.0",
+    "private": true,
+    "type": "module",
+    "exports": {
+        "./api": "./src/api/types.ts"
+    },
+    "scripts": {
+        "dev": "node scripts/build-app.mjs --dev && wrangler d1 migrations apply DB --local && wrangler dev",
+        "build": "node scripts/build-app.mjs",
+        "deploy": "node scripts/build-app.mjs && node scripts/deploy.mjs",
+        "db:generate": "drizzle-kit generate",
+        "test": "vitest run",
+        "check-types": "tsc --noEmit && node scripts/check-root-config.mjs",
+        "deploy:root": "node scripts/build-app.mjs && node scripts/deploy.mjs -c ../../wrangler.jsonc"
+    },
+    "dependencies": {
+        "@better-auth/drizzle-adapter": "~1.7.23",
+        "@better-auth/passkey": "~1.7.23",
+        "better-auth": "~1.7.23",
+        "drizzle-orm": "1.0.0-rc.5",
+        "hono": "^4.13.18",
+        "zod": "^4.6.7"
+    },
+    "devDependencies": {
+        "@cloudflare/vitest-plugin": "^1.8.2",
+        "@cloudflare/workers-types": "^5.20261114.1",
+        "drizzle-kit": "1.0.0-rc.5",
+        "typescript": "^7.0.2",
+        "vitest": "^5.1.0",
+        "wrangler": "^4.162.0"
+    },
+    "cloudflare": {
+        "bindings": {
+            "ADMIN_TOKEN": {
+                "description": "Token the Mailflare app uses to manage your aliases. Use a long random string, for example from `openssl rand -base64 32`, and keep it: you enter it in the app to connect."
+            },
+            "AUTH_SECRET": {
+                "description": "Secret that signs account sessions. Use another long random string, for example from `openssl rand -base64 32`. You never need to enter it anywhere."
+            },
+            "DB": {
+                "description": "D1 database for your domains, destinations and aliases. Created automatically."
+            }
+        }
+    }
+}

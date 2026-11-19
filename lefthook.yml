@@ -1,0 +1,7 @@
+# Git hooks, installed by `pnpm install` (see lefthook in pnpm-workspace.yaml).
+pre-commit:
+    jobs:
+        - name: format
+          # oxfmt skips files it doesn't format.
+          run: pnpm exec oxfmt --write --no-error-on-unmatched-pattern {staged_files}
+          stage_fixed: true

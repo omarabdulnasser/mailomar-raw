@@ -1,0 +1,4 @@
+# Bearer token for the management API (use a long random string).
+ADMIN_TOKEN=change-me
+# Signs account sessions (use a different long random string).
+AUTH_SECRET=change-me-too

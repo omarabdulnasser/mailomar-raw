@@ -1,0 +1,432 @@
+{
+    "common": {
+        "on": "On",
+        "off": "Off",
+        "no": "No",
+        "yes": "Yes",
+        "open": "Open",
+        "save": "Save",
+        "error": "Error",
+        "success": "Success",
+        "create": "Create",
+        "edit": "Edit",
+        "delete": "Delete",
+        "enabled": "Enabled",
+        "disabled": "Disabled",
+        "refresh": "Refresh",
+        "close": "Close",
+        "offline": "Requires internet connection"
+    },
+    "alias_card": {
+        "description_placeholder": "(no description)",
+        "copy": "Copy to clipboard",
+        "copy_success": "Alias copied to clipboard!",
+        "edit": "Edit alias",
+        "delete": "Delete alias"
+    },
+    "alias_badge": {
+        "invalid": "Invalid",
+        "external": "External",
+        "disabled": "Disabled"
+    },
+    "alias_list": {
+        "domain_placeholder": "Select domain",
+        "select": "Select",
+        "stop_select": "Stop select",
+        "search": "Show search",
+        "stop_search": "Hide search",
+        "create": "Create alias",
+        "refresh": "Refresh data",
+        "search_placeholder": "Search your aliases...",
+        "email_routing_not_enabled": "Email Routing is either disabled or not configured properly for this domain.",
+        "email_routing_dashboard": "Check Cloudflare Dashboard",
+        "no_zones": "No domains for this Cloudflare account or API token.",
+        "zones_error": "Something went wrong while loading your domains: {error}",
+        "no_rules": "There are no aliases for this domain or this filter.",
+        "rules_error": "Something went wrong while loading your aliases: {error}",
+        "no_worker_domains": "Add the domains your Worker receives mail for to start creating aliases.",
+        "add_domain": "Add domain",
+        "no_shared_domains": "There are no domains to create aliases on yet. Ask the admin of this Worker to share one.",
+        "count": "{count, plural, one {# alias} other {# aliases}}",
+        "done_select": "Done",
+        "all_domains": "All domains"
+    },
+    "alias_create": {
+        "title": "Create Alias",
+        "domain": "Domain",
+        "alias_format": "Alias Format",
+        "format_characters": "Random Characters",
+        "format_words": "Random Words",
+        "format_domain": "Website Domain",
+        "format_custom": "Custom",
+        "number_of_chars": "Number of Characters",
+        "number_of_words": "Number of Words",
+        "custom_alias": "Custom Alias",
+        "description": "Description",
+        "description_placeholder": "Optional description...",
+        "prefix": "Prefix",
+        "prefix_none": "None",
+        "prefix_domain_without_ext": "Domain without TLD",
+        "prefix_domain_with_ext": "Domain with TLD",
+        "prefix_full_domain": "Full Domain",
+        "prefix_custom": "Custom Prefix",
+        "prefix_custom_label": "Custom Prefix",
+        "destination": "Destination",
+        "generated_alias": "Generated Alias",
+        "generated_alias_unavailable": "Unavailable",
+        "regenerate": "Regenerate",
+        "alias_already_exists": "This alias already exists",
+        "save_settings": "Save as Default",
+        "created_success": "Alias created successfully!",
+        "created_and_copied": "Alias created and copied to clipboard!",
+        "creation_error": "Could not create the alias: {error}",
+        "domain_not_found": "Domain not found",
+        "invalid_domain": "Please select a valid domain",
+        "invalid_format": "Please select a valid format",
+        "invalid_length": "Length must be between 3 and 25",
+        "invalid_word_count": "Word count must be between 1 and 5",
+        "invalid_custom_alias": "Use letters, digits, dots, underscores and hyphens, starting and ending with a letter or digit",
+        "invalid_custom_prefix": "Use letters, digits, dots, underscores and hyphens",
+        "invalid_destination": "Please select a valid destination",
+        "description_too_long": "Keep the description under 500 characters"
+    },
+    "alias_edit": {
+        "title": "Edit Alias",
+        "alias": "Alias",
+        "save": "Save",
+        "success": "Alias updated successfully!",
+        "error": "Could not update alias: {error}",
+        "not_found": "Alias not found"
+    },
+    "alias_delete": {
+        "title": "Delete Alias",
+        "question_1": "Are you sure you want to delete",
+        "question_2": "This action cannot be undone.",
+        "success": "Alias deleted successfully!",
+        "error": "Could not delete alias: {error}"
+    },
+    "alias_bulk_edit": {
+        "title": "Edit Selected Aliases",
+        "keep_destinations": "Keep current destinations",
+        "success": "Selected aliases updated successfully!",
+        "enabled_keep": "Keep enabled or disabled",
+        "enabled_on": "Enable all",
+        "enabled_off": "Disable all",
+        "partial": "{failed} of {total} aliases could not be changed and stay selected: {error}"
+    },
+    "alias_bulk_delete": {
+        "title": "Delete Selected Aliases",
+        "question": "Are you sure you want to delete {count} aliases?",
+        "success": "Selected aliases deleted successfully!",
+        "partial": "{failed} of {total} aliases could not be deleted and stay selected: {error}"
+    },
+    "login": {
+        "mode_label": "Connection type",
+        "mode_cloudflare": "Cloudflare API",
+        "mode_worker": "Mailflare Worker",
+        "login_error": "Token could not be verified: {error}",
+        "token_label": "Cloudflare API Token",
+        "token_placeholder": "Paste your Cloudflare API token here",
+        "save_token": "Save token",
+        "offline_login": "Cannot verify token while offline",
+        "instructions": {
+            "title": "Instructions",
+            "step_1": "Open https://dash.cloudflare.com/profile/api-tokens",
+            "step_2": "Click \"Create Token\", select \"Create Custom Token\"",
+            "step_3": "Choose a name, like \"Email Extension\"",
+            "step_4": "Configure the following permissions:",
+            "step_5": "Set \"Account Resources\" to your account",
+            "step_6": "Set \"Zone Resources\" to \"All zones\" or select the zone you want to use",
+            "step_7": "Configure \"Client IP Address Filtering\" and \"TTL\" if you want to",
+            "step_8": "Click \"Continue to summary\" and then \"Create token\"",
+            "step_9": "Paste the generated token above"
+        },
+        "token_required": "Enter a token",
+        "worker_url_label": "Worker URL",
+        "worker_url_placeholder": "mailflare.your-name.workers.dev",
+        "worker_url_invalid": "Enter your Worker's https URL",
+        "worker_token_label": "Admin token",
+        "worker_token_placeholder": "The ADMIN_TOKEN you set when deploying",
+        "worker_error": "Could not connect: {error}",
+        "connect": "Connect",
+        "worker_intro": "Worker mode stores your aliases in your own Cloudflare Worker instead of Email Routing rules, so there's no 200-alias limit per domain.",
+        "worker_guide": "How to set up a Worker",
+        "worker_account": "Sign in with an account",
+        "worker_account_hint": "Opens your Worker's sign-in page."
+    },
+    "settings": {
+        "title": "Settings",
+        "theme": {
+            "title": "Theme",
+            "description": "Toggle between theme modes",
+            "light": "Light",
+            "dark": "Dark",
+            "auto": "Auto"
+        },
+        "language": {
+            "title": "Language",
+            "description": "Choose a language for the UI",
+            "english": "🇬🇧 English"
+        },
+        "filter": {
+            "title": "Rule Filter",
+            "description": "Only show email rules created by this extension"
+        },
+        "copy": {
+            "title": "Copy Alias",
+            "description": "Copy alias to clipboard after creating it"
+        },
+        "quick_create": {
+            "title": "Quick-Create Button",
+            "description": "Show a button inside email input fields to quickly create an alias for the current site"
+        },
+        "logout": {
+            "title": "Logout",
+            "description": "Remove your token and data from this device",
+            "action": "Logout",
+            "success": "Goodbye",
+            "failed": "Couldn't reach the Worker to sign you out. Try again when you're online.",
+            "dialog": {
+                "title": "Logout",
+                "description": "Do you want to log out? Your token, cached data and alias defaults are removed from this device; app settings like the theme stay. Your aliases keep working."
+            }
+        },
+        "info": "Info",
+        "docs": {
+            "title": "Cloudflare Docs",
+            "description": "For more information about Email Routing"
+        },
+        "import": {
+            "title": "Import Aliases",
+            "description": "Import aliases from other email alias services",
+            "action": "Import"
+        },
+        "refresh": {
+            "title": "Refresh data",
+            "description": "Refresh Cloudflare domains and email destinations",
+            "success": "Refreshed successfully",
+            "action": "Refresh"
+        },
+        "manage_domains": {
+            "title": "Domains & destinations",
+            "description": "Domains and mailboxes your Worker uses"
+        },
+        "accounts": {
+            "title": "Accounts",
+            "description": "People with an account on this Worker"
+        },
+        "worker": {
+            "title": "Domains, inboxes and account",
+            "description": "Managed in your Worker's own app.",
+            "action": "Open"
+        },
+        "admin": {
+            "title": "Admin",
+            "description": "Domains and accounts of this Worker"
+        }
+    },
+    "background": {
+        "error_not_logged_in": "You are not logged in to MailFlare",
+        "error_no_destination": "No destination configured in MailFlare",
+        "error_custom": "Cannot generate alias with custom format from background",
+        "error_invalid_domain": "Selected domain is not valid",
+        "alert_loading": "Creating new alias...",
+        "alert_created": "Alias created: {alias}",
+        "context_menu": "Generate and copy new MailFlare alias",
+        "alert_created_copied": "Alias created and copied: {alias}"
+    },
+    "import": {
+        "title": "Import Aliases",
+        "page_description": "Bring your aliases over from addy.io or SimpleLogin. They keep their addresses, so they must be on domains Mailflare manages.",
+        "steps": {
+            "service": "Service",
+            "preview": "Select",
+            "target": "Destination",
+            "import": "Import"
+        },
+        "select_service": "Select the service to import aliases from:",
+        "enter_token": "Enter the API token for the selected service:",
+        "token_placeholder": "Paste your API token here",
+        "invalid_token": "Invalid API token. Please check and try again.",
+        "no_aliases_found": "No aliases found for this account.",
+        "fetch_error": "Failed to fetch aliases. Please try again.",
+        "verify_and_fetch": "Verify & Fetch Aliases",
+        "fetched_count": "Found {count, plural, one {# alias} other {# aliases}}",
+        "select_all": "Select all",
+        "deselect_all": "Deselect all",
+        "non_matching_zones": "{count, plural, one {# alias is} other {# aliases are}} on domains Mailflare can't create aliases on, and cannot be imported.",
+        "back": "Back",
+        "next": "Next",
+        "select_destination": "Select the forwarding destination for all imported aliases:",
+        "destination_placeholder": "Select destination",
+        "will_import_total": "{count, plural, one {# alias} other {# aliases}} will be imported across your zones.",
+        "rule_limit_warning": "Cloudflare has a default limit of 200 email routing rules per zone. The following zones exceed this limit: {domains}. Some imports may fail.",
+        "start_import": "Start Import",
+        "importing": "Importing aliases...",
+        "progress_count": "{completed} of {total} processed",
+        "failed_count": "{count, plural, one {# failed} other {# failed}}",
+        "abort": "Abort",
+        "imported_count": "{count, plural, one {# alias} other {# aliases}} imported successfully.",
+        "skipped_count": "{count, plural, one {# alias} other {# aliases}} skipped (different domain).",
+        "summary_failed": "{count, plural, one {# alias} other {# aliases}} failed to import.",
+        "start_over": "Start Over",
+        "only_enabled": "Only enabled aliases",
+        "only_enabled_hint": "Leave out aliases that are turned off at {service}."
+    },
+    "offline": {
+        "banner": "You are offline. Viewing cached data. Some actions may not be available."
+    },
+    "manage_domains": {
+        "title": "Domains & destinations",
+        "domains": "Domains",
+        "domains_description": "In Cloudflare, set each domain's Email Routing catch-all to \"Send to a Worker\" and pick your Mailflare Worker.",
+        "domain_input": "Domain",
+        "destinations": "Destinations",
+        "destinations_description": "Mailboxes your aliases forward to. Each one must be a verified destination address in Cloudflare Email Routing.",
+        "destination_input": "Email address",
+        "add": "Add",
+        "empty": "None yet.",
+        "shared": "Shared",
+        "shared_label": "Share {domain} with accounts",
+        "shared_hint": "Shared domains are available to every account on this Worker.",
+        "destinations_description_account": "Mailboxes your aliases forward to. New ones get an email with a link to confirm them first.",
+        "unconfirmed": "Unconfirmed",
+        "resend": "Resend link",
+        "resent": "Sent a new confirmation link to {email}",
+        "limits": "Your account can have up to {aliases} aliases and {destinations} mailboxes, and send {sends} messages a day from aliases."
+    },
+    "account": {
+        "sign_in": "Sign in",
+        "sign_up": "Create account",
+        "email_label": "Email",
+        "email_invalid": "Enter your email address",
+        "password_label": "Password",
+        "password_too_short": "Use at least 8 characters",
+        "passkey": "Sign in with a passkey",
+        "magic_link": "Email me a sign-in link",
+        "forgot_password": "Forgot password?",
+        "link_sent": "If {email} has an account, a link is on its way.",
+        "sign_up_sent": "Almost done: open the link we sent to {email} to confirm your address.",
+        "verify_email_first": "Confirm your email first. We sent a new link to {email}.",
+        "admin_token": "Sign in with the admin token",
+        "errors": {
+            "wrong_password": "Wrong email or password",
+            "too_many": "Too many attempts. Try again in a minute.",
+            "link_invalid": "This link is invalid, expired or was already used.",
+            "generic": "Something went wrong: {error}"
+        },
+        "reset": {
+            "title": "Set a new password",
+            "password_label": "New password",
+            "submit": "Save password",
+            "success": "Password changed. Sign in with it now."
+        },
+        "verify_email": {
+            "title": "Confirm your email",
+            "description": "Someone created a Mailflare account with this email address. Only confirm if that was you just now: whoever created it can then sign in to it.",
+            "submit": "Confirm and sign in",
+            "success": "Email confirmed. Your account is ready.",
+            "home": "Open Mailflare"
+        },
+        "verify_destination": {
+            "title": "Confirm this inbox",
+            "description": "Someone added this inbox to their Mailflare account, so their aliases can forward mail to it. Only confirm if that was you.",
+            "submit": "Confirm inbox",
+            "success": "Inbox confirmed. Aliases can now forward mail here.",
+            "home": "Open Mailflare"
+        },
+        "passkeys": {
+            "title": "Passkeys",
+            "description": "Signed in as {email}. Add a passkey to sign in without a password.",
+            "action": "Add passkey",
+            "success": "Passkey added"
+        },
+        "authorize": {
+            "title": "Connect the extension",
+            "description": "The Mailflare extension wants to use your account {email}. It can then manage your aliases until you log out in the extension.",
+            "allow": "Connect",
+            "deny": "Cancel",
+            "sign_in_first": "Sign in to connect the Mailflare extension.",
+            "invalid": "This connection request is invalid. Start again from the extension.",
+            "unknown_app": "This Worker doesn't allow this extension to connect. Its admin can allow development builds with the EXTENSION_IDS setting.",
+            "admin_token": "You're signed in with the admin token. Enter it in the extension instead, or log out here and sign in with an account."
+        },
+        "page": {
+            "description": "Signed in as {email}.",
+            "passkeys_empty": "No passkeys yet. Add one to sign in without a password.",
+            "passkey_unnamed": "Passkey added {date}",
+            "delete_passkey": "Remove passkey",
+            "passkey_removed": "Passkey removed",
+            "password_title": "Password",
+            "current_password": "Current password",
+            "new_password": "New password",
+            "change_password": "Change password",
+            "password_changed": "Password changed. Your other devices were signed out.",
+            "no_password": "You sign in with links and passkeys. To use a password too, set one with a link we email you.",
+            "set_password": "Email me a link",
+            "set_password_sent": "Sent a link to {email}",
+            "sessions_title": "Signed-in devices",
+            "sessions_description": "Where your account is signed in, including the extension.",
+            "this_device": "This device",
+            "unknown_device": "Unknown device",
+            "signed_in_at": "Signed in {date}",
+            "sign_out_device": "Sign out",
+            "signed_out_device": "Signed out that device",
+            "sign_out_others": "Sign out everywhere else",
+            "signed_out_others": "Signed out all other devices",
+            "delete_title": "Delete account",
+            "delete_description": "Deletes your account with all its aliases and inboxes. Mail to your aliases will bounce. This can't be undone.",
+            "delete_password": "Password, to confirm",
+            "delete_action": "Delete account",
+            "delete_confirm_title": "Delete your account?",
+            "delete_confirm_description": "Your aliases stop working right away, and this can't be undone.",
+            "deleted": "Your account was deleted"
+        }
+    },
+    "users": {
+        "title": "Accounts",
+        "empty": "No accounts yet.",
+        "admin": "Admin",
+        "suspended": "Suspended",
+        "unverified": "Email unconfirmed",
+        "make_admin": "Make admin",
+        "remove_admin": "Remove admin",
+        "suspend": "Suspend",
+        "unsuspend": "Unsuspend",
+        "you": "You",
+        "error": "Could not load accounts: {error}",
+        "description": "People with an account on this Worker. Suspending an account signs it out everywhere and stops its aliases."
+    },
+    "nav": {
+        "aliases": "Aliases",
+        "inboxes": "Inboxes",
+        "account": "Account",
+        "settings": "Settings",
+        "admin": "Admin",
+        "domains": "Domains",
+        "accounts": "Accounts",
+        "pages": "Pages",
+        "cloudflare": "Cloudflare Email Routing",
+        "tagline": "Email aliases on your own domains",
+        "import": "Import"
+    },
+    "alias_details": {
+        "activity": "Activity",
+        "forwarded": "Forwarded",
+        "blocked": "Blocked",
+        "sent": "Sent",
+        "last_mail": "Last mail",
+        "never": "Never",
+        "close": "Close",
+        "empty": "Select an alias to see what it handled and to edit it."
+    },
+    "extension": {
+        "updated": "Mailflare was updated to version {version}",
+        "access": {
+            "title": "Mailflare can't reach Cloudflare",
+            "description": "Signing in with a Cloudflare API token needs access to api.cloudflare.com. Mailflare Workers work without it.",
+            "denied": "Access wasn't granted. Allow it here, or in your browser's extension settings.",
+            "allow": "Allow access"
+        }
+    }
+}

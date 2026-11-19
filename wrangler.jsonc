@@ -1,0 +1,29 @@
+// The Mailflare Worker, configured from the repository root for the Deploy to
+// Cloudflare button (which copies the whole monorepo, so the Worker can serve
+// the web app). Mirrors apps/worker/wrangler.jsonc with paths from the root;
+// `pnpm --filter @mailflare/worker check-types` checks they match.
+{
+    "$schema": "apps/worker/node_modules/wrangler/config-schema.json",
+    "name": "mailomar-raw",
+    "main": "apps/worker/src/index.ts",
+    "compatibility_date": "2026-11-01",
+    "compatibility_flags": ["nodejs_compat"],
+    "keep_vars": true,
+    "observability": { "enabled": true },
+    "assets": {
+        "directory": "apps/worker/app",
+        "not_found_handling": "single-page-application",
+        "run_worker_first": ["/api/*"],
+    },
+    "send_email": [{ "name": "EMAIL" }],
+    // Daily housekeeping: expired links, sessions and counters.
+    "triggers": { "crons": ["17 3 * * *"] },
+    "d1_databases": [
+        {
+            "binding": "DB",
+            "database_name": "mailflare",
+            "migrations_dir": "apps/worker/migrations",
+            "migrations_pattern": "apps/worker/migrations/*/migration.sql","database_id": "ebfe438f-631b-490e-9778-544843d68d5a",
+        },
+    ],
+}
